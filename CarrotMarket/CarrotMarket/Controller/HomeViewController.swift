@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     
     private func taskArrayFromAsset() -> [ListedItem] {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
         
         guard let data = fetchDataFromLocalFile(),
               let model = try? decoder.decode(ItemList.self, from: data) else { return [] }
