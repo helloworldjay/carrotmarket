@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48A2A0CA26A2F2FD00F2BCCD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A0C926A2F2FD00F2BCCD /* MainTableViewCell.swift */; };
+		48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */; };
 		48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */; };
 		48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */; };
-		48B7FDF426A183F40078CCC0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF326A183F40078CCC0 /* MainViewController.swift */; };
+		48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF326A183F40078CCC0 /* HomeViewController.swift */; };
 		48B7FDF726A183F40078CCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B7FDF526A183F40078CCC0 /* Main.storyboard */; };
 		48B7FDF926A183F60078CCC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B7FDF826A183F60078CCC0 /* Assets.xcassets */; };
 		48B7FDFC26A183F60078CCC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B7FDFA26A183F60078CCC0 /* LaunchScreen.storyboard */; };
@@ -36,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		48A2A0C926A2F2FD00F2BCCD /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		48B7FDEC26A183F40078CCC0 /* CarrotMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48B7FDF326A183F40078CCC0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		48B7FDF326A183F40078CCC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48B7FDF626A183F40078CCC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48B7FDF826A183F60078CCC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B7FDFB26A183F60078CCC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		48A2A0C826A2F2CF00F2BCCD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				48A2A0C926A2F2FD00F2BCCD /* MainTableViewCell.swift */,
+				48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 		48B7FE1F26A187380078CCC0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				48B7FDF326A183F40078CCC0 /* MainViewController.swift */,
+				48B7FDF326A183F40078CCC0 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,9 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B7FDF426A183F40078CCC0 /* MainViewController.swift in Sources */,
+				48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */,
 				48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */,
-				48A2A0CA26A2F2FD00F2BCCD /* MainTableViewCell.swift in Sources */,
+				48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */,
 				48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
