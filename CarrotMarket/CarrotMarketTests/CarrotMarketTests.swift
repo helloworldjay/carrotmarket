@@ -17,17 +17,20 @@ class CarrotMarketTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func fetchDataFromLocalFile() -> Data? {
+        guard let dataAsset = NSDataAsset.init(name: "carrotJSON") else { return nil }
+        return dataAsset.data
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_fetchDataFromLocalJSONFile() {
+        XCTAssertNotNil(fetchDataFromLocalFile())
     }
-
+    
+    func test_decodeFromJSON() {
+        let decoder = JSONDecoder()
+        guard let dataAsset = fetchDataFromLocalFile(), let decodedData = try? decoder.decode(ItemList.self, from: dataAsset) else { return }
+        
+        XCTAssertNotNil(decodedData)
+    }
 }
