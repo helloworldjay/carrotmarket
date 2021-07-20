@@ -25,6 +25,7 @@ struct ListedItem: Decodable {
     var price: UInt
     var chat: UInt?
     var heart: UInt?
+    var thumbnails: [String]
 }
 
 

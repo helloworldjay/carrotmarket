@@ -8,5 +8,5 @@
 import Foundation
 
 enum APIError: Error {
-    case jsonParsingError, networkError
+    case jsonParsingError, networkError, invalidAddressError
 }
