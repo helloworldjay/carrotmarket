@@ -156,9 +156,21 @@
                     <navigationItem key="navigationItem" id="snb-N8-2cZ">
                         <barButtonItem key="leftBarButtonItem" title="덕풍 1동" id="esC-e5-A88"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="alarm" catalog="system" id="Ami-5H-XOA"/>
-                            <barButtonItem title="Item" image="filemenu.and.cursorarrow" catalog="system" id="o1H-eF-oVQ"/>
-                            <barButtonItem systemItem="search" id="eIW-Z0-kCw"/>
+                            <barButtonItem title="Item" image="alarm" catalog="system" id="Ami-5H-XOA">
+                                <connections>
+                                    <segue destination="yFh-Po-Qhy" kind="show" id="6he-x1-6bc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="filemenu.and.cursorarrow" catalog="system" id="o1H-eF-oVQ">
+                                <connections>
+                                    <segue destination="e9M-17-xYL" kind="show" id="a5v-PN-93z"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="eIW-Z0-kCw">
+                                <connections>
+                                    <segue destination="ERV-NQ-xG2" kind="show" id="PNU-Ha-yYy"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -168,6 +180,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.10144927536237" y="-601.63043478260875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dr7-Sd-hvn">
+            <objects>
+                <viewController id="ERV-NQ-xG2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mHS-2y-86b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5ql-50-kaD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GIj-dc-kQE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AwM-Q1-FrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="-1154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rzw-o7-DIe">
+            <objects>
+                <viewController id="e9M-17-xYL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ANH-Sm-DGS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vfK-W2-Etg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sd7-pK-XZt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J16-8J-Xy5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="-488"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ior-BH-jWu">
+            <objects>
+                <viewController id="yFh-Po-Qhy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o7W-tu-70M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fC3-o7-c7T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nQZ-RL-e8Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WX2-3a-Ygg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="196"/>
         </scene>
         <!--동네생활-->
         <scene sceneID="Pcn-VX-GWB">
