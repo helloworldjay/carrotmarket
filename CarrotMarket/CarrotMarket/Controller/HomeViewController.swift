@@ -13,30 +13,30 @@ class HomeViewController: UIViewController {
     
     private var itemList = [ListedItem]()
     private var currentPage: UInt = 1
+    private let networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itemListTableView.dataSource = self
         self.itemListTableView.delegate = self
-        self.itemList = taskArrayFromAsset()
+        self.itemList += taskArrayFromAsset()
         
-        // Network 작업이 있을 때
-        //        let networkManager = NetworkManager()
-        //        networkManager.fetchItemList(page: self.currentPage) { result in
-        //            switch result {
-        //            case .success(let model):
-        //                let fetchedItemList = ItemList(page: self.currentPage, itemList: model.itemList)
-        //                let listedItem = fetchedItemList.itemList
-        //                self.itemList.append(contentsOf: listedItem)
-        //                DispatchQueue.main.async {
-        //                    self.itemListTableView.reloadData()
-        //                }
-        //                return
-        //            case .failure(let error):
-        //                let alert = UIAlertController(title: "Error", message: "네트워크 에러가 발생했습니다.", preferredStyle: UIAlertController.Style.alert)
-        //                self.present(alert, animated: false)
-        //            }
-        
+        // Network 작업시
+//                networkManager.fetchItemList(page: self.currentPage) { result in
+//                    switch result {
+//                    case .success(let model):
+//                        let fetchedItemList = ItemList(page: self.currentPage, itemList: model.itemList)
+//                        let listedItem = fetchedItemList.itemList
+//                        self.itemList.append(contentsOf: listedItem)
+//                        DispatchQueue.main.async {
+//                            self.itemListTableView.reloadData()
+//                        }
+//                        return
+//                    case .failure(_):
+//                        let alert = UIAlertController(title: "Error", message: "네트워크 에러가 발생했습니다.", preferredStyle: UIAlertController.Style.alert)
+//                        self.present(alert, animated: false)
+//                    }
+//                }
     }
     
     
@@ -54,6 +54,57 @@ class HomeViewController: UIViewController {
         
         return model.itemList
     }
+    
+    // Network 작업시
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        itemListTableView.frame = view.bounds
+//        networkManager.fetchItemList(page: currentPage) { [weak self] result in
+//            switch result {
+//            case .success(let data):
+//                self?.itemList += data.itemList
+//                DispatchQueue.main.async {
+//                    self?.itemListTableView.reloadData()
+//                }
+//            case .failure(_):
+//                break
+//            }
+//        }
+//    }
+
+    // Network 작업시
+//    private func createSpinnerFooter() -> UIView {
+//        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+//
+//        let spinner = UIActivityIndicatorView()
+//        spinner.center = footerView.center
+//        footerView.addSubview(spinner)
+//        spinner.startAnimating()
+//
+//        return footerView
+//    }
+    
+    // Network 작업시
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let position = scrollView.contentOffset.y
+//
+//        if position > (itemListTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+//
+//            self.itemListTableView.tableFooterView = createSpinnerFooter()
+//            self.currentPage += 1
+//            networkManager.fetchItemList(page: currentPage) { result in
+//                DispatchQueue.main.async {
+//                    self.itemListTableView.tableFooterView = nil
+//                }
+//                switch result {
+//                case .success(let data):
+//                    self.itemList += data.itemList
+//                case .failure:
+//                    break
+//                }
+//            }
+//        }
+//    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -84,13 +135,13 @@ extension HomeViewController: UITableViewDataSource {
         return itemCell
     }
     
-    func decimalWon(value: UInt) -> String {
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
-            
-            return result
-        }
+    private func decimalWon(value: UInt) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
+        
+        return result
+    }
     
     private func getThumbnailImage(_ index: Int) -> UIImage {
         let listedItem = self.itemList[index]

@@ -28,7 +28,15 @@ struct NetworkManager {
         }.resume()
     }
     
-    
-    
-    
+    func fetchItemList(page: UInt, completion: @escaping (Result<ItemList, APIError>) -> ()) {
+        let fetchItemListURL = "JSON URL"
+        
+        guard let apiURL = URL(string: fetchItemListURL) else {
+            completion(.failure(APIError.invalidAddressError))
+            return
+        }
+        
+        let request = URLRequest(url: apiURL)
+        fetchModel(with: request, completionHandler: completion)
+    }
 }
