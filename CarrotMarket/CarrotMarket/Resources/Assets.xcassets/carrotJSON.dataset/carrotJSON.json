@@ -3,34 +3,93 @@
     "items": [
         {
             "id": 1,
-            "title": "듀스펙 보건교사 임용교시 책 일괄 (총 14권)",
-            "location": "망월동",
+            "title": "이케아 철제 선반",
+            "location": "봉명동",
             "date": "2020-05-29T06:43:10.464Z",
-            "price": 30000,
-            "heart": 1
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/2cbf5ceb1c30994eecc550887d77917f697daf0f29c30bcce7ff7059c9611db6.webp?q=82&s=300x300&t=crop"],
+            "price": 8000,
+            "heart": 7,
+            "chat": 29
         },
         {
             "id": 2,
-            "title": "이케아 쿠라 이층침대",
+            "title": "창문형 에어컨 파세코",
             "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/cfc9bc58bce1373f2ed17226b2c139999f18b45e283d2466319dbaebb5c4791d.webp?q=82&s=300x300&t=crop"],
             "date": "2021-02-14T06:43:10.464Z",
-            "price": 100000
+            "price": 150000,
+            "heart": 3,
+            "chat": 31
         },
         {
             "id": 3,
-            "title": "왜, 무엇을&어떻게 시리즈+주머니 약어사전",
+            "title": "위닉스 제습기 16리터 팝니다",
             "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/ea06fd0f1a31a9217a87e84e6dc1840b9e87742068621bdd8cc5955258ecb334.webp?q=82&s=300x300&t=crop"],
             "date": "2020-03-31T06:43:10.464Z",
-            "price": 30000
+            "price": 35000,
+            "heart": 10,
+            "chat": 29
         },
         {
             "id": 4,
-            "title": "유닉스고데기 uci-18001",
+            "title": "다이슨 청소기 팝니다",
             "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/e912b132b22c25d69f2df55aaf898c21cc1713f12ff61c5bfefdcac7985527ff.webp?q=82&s=300x300&t=crop"],
             "date": "2021-08-26T06:43:10.464Z",
-            "price": 11000,
-            "chat": 2,
+            "price": 10000,
+            "chat": 67,
+            "heart": 10
+        },
+        {
+            "id": 5,
+            "title": "시디즈 의자",
+            "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/2e4ecf16dc0c2064f0406d403f0570d307e11105cea1bb223eacea3534568f3c.webp?q=82&s=300x300&t=crop"],
+            "date": "2020-03-31T06:43:10.464Z",
+            "price": 20000,
+            "chat": 20,
+            "heart": 6
+        },
+        {
+            "id": 6,
+            "title": "갤럭시 s10 5g",
+            "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/D1FC3E8E833762771A300E15E343B08A30E0442E2AB1539E1E7CB7610C8F478D.jpg?q=82&s=300x300&t=crop"],
+            "date": "2020-03-31T06:43:10.464Z",
+            "price": 120000,
+            "chat": 39,
+            "heart": 15
+        },
+        {
+            "id": 7,
+            "title": "이동식에어컨팝니다",
+            "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/9c6574a7351eb312607747d35c4c6daa99b161c46f48e89e111ee4cb9c8d8c37.webp?q=82&s=300x300&t=crop"],
+            "date": "2020-03-31T06:43:10.464Z",
+            "price": 100000,
+            "chat": 19,
             "heart": 8
+        },
+        {
+            "id": 8,
+            "title": "이동식에어컨 드려요",
+            "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/a4c166fcf7a8aff0bccfaf7a7b1be27e09cd5dca9a0794df06350ffce1b6c403.webp?q=82&s=300x300&t=crop"],
+            "date": "2021-08-26T06:43:10.464Z",
+            "price": 10000,
+            "chat": 19,
+            "heart": 4
+        },
+        {
+            "id": 9,
+            "title": "제습기 [LG]",
+            "location": "망월동",
+            "thumbnails": ["https://dnvefa72aowie.cloudfront.net/origin/article/202107/91D68D29EFEC6AF762CC4C43EC4D81FA5117C3EBBFE15D582532B07D24C258C4.jpg?q=82&s=300x300&t=crop"],
+            "date": "2021-08-26T06:43:10.464Z",
+            "price": 30000,
+            "chat": 27,
+            "heart": 4
         }
     ]
 }
