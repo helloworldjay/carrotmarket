@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itemListTableView.dataSource = self
-        self.itemListTableView.delegate = self
         self.itemList += taskArrayFromAsset()
         
         // Network 작업시
@@ -48,7 +47,7 @@ class HomeViewController: UIViewController {
     private func taskArrayFromAsset() -> [ListedItem] {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
-        
+        // decoding에 문제가 생겼다는 것은 서버에서 온 데이터 구조가 fit 하지 않다는 것이고 사용자 관점에서는 error로 앱이 꺼지는 것보다 빈 화면이 나오는 것이 낫다고 판단
         guard let data = fetchDataFromLocalFile(),
               let model = try? decoder.decode(ItemList.self, from: data) else { return [] }
         
@@ -113,45 +112,10 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let itemCell = itemListTableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeTableViewCell
-        itemCell.itemTitle.text = self.itemList[indexPath.row].title
-        itemCell.itemLocation.text = self.itemList[indexPath.row].location
-        itemCell.itemPrice.text = decimalWon(value: self.itemList[indexPath.row].price)
-        if let chat = self.itemList[indexPath.row].chat {
-            itemCell.itemChat.text = "💬" + String(chat)
-        } else {
-            itemCell.itemChat.text = ""
-        }
-        if let heart = self.itemList[indexPath.row].heart {
-            itemCell.itemHeart.text = "🤍" + String(heart)
-        } else {
-            itemCell.itemHeart.text = ""
-        }
-        DispatchQueue.main.async(execute: {
-            itemCell.itemImage.image = self.getThumbnailImage(indexPath.row)
-        })
+        guard let itemCell = itemListTableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
+        itemCell.customizeCell(with: self.itemList[indexPath.row])
         return itemCell
     }
     
-    private func decimalWon(value: UInt) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
-        
-        return result
-    }
-    
-    private func getThumbnailImage(_ index: Int) -> UIImage {
-        let listedItem = self.itemList[index]
-        let url: URL! = URL(string: listedItem.thumbnails[0])
-        let imageData = try! Data(contentsOf: url)
-        return UIImage(data:imageData)!
-    }
-    
 }
-
-extension HomeViewController: UITableViewDelegate {
-    
-}
-

@@ -90,6 +90,16 @@
             "price": 30000,
             "chat": 27,
             "heart": 4
+        },
+        {
+            "id": 10,
+            "title": "사진은 없습니다.",
+            "location": "망월동",
+            "thumbnails": [""],
+            "date": "2021-08-26T06:43:10.464Z",
+            "price": 30000,
+            "chat": 27,
+            "heart": 4
         }
     ]
 }
