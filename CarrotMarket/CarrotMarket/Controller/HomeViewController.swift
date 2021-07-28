@@ -114,6 +114,10 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let itemCell = itemListTableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
+        if let thumbnail = UIImage(named: "당근마켓 아이콘") {
+            itemCell.itemImage.image = thumbnail
+        }
+        
         itemCell.customizeCell(with: self.itemList[indexPath.row])
         return itemCell
     }

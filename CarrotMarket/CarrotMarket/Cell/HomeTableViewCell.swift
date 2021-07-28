@@ -17,13 +17,6 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var itemChat: UILabel!
     @IBOutlet weak var itemHeart: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        if let thumbnail = UIImage(named: "당근마켓 아이콘") {
-            self.itemImage.image = thumbnail
-        }
-    }
-    
     func customizeCell(with item: ListedItem) {
         self.itemTitle.text = item.title
         self.itemLocation.text = item.location
