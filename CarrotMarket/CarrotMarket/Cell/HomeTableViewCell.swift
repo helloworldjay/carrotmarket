@@ -4,7 +4,7 @@
 //
 //  Created by Seungjin Baek on 2021/07/17.
 //
-// 기능 옮기기
+
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
@@ -17,15 +17,11 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var itemChat: UILabel!
     @IBOutlet weak var itemHeart: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+        if let thumbnail = UIImage(named: "당근마켓 아이콘") {
+            self.itemImage.image = thumbnail
+        }
     }
     
     func customizeCell(with item: ListedItem) {
@@ -43,7 +39,11 @@ class HomeTableViewCell: UITableViewCell {
         } else {
             self.itemHeart.text = ""
         }
-        
+        if let thumbnail = self.getThumbnailImage(with: item) {
+            DispatchQueue.main.async(execute: {
+                self.itemImage.image = thumbnail
+            })
+        }
     }
     
     private func decimalWon(value: UInt) -> String {
@@ -54,5 +54,8 @@ class HomeTableViewCell: UITableViewCell {
         return result
     }
     
-    
+    private func getThumbnailImage(with item: ListedItem) -> UIImage? {
+        guard let url = URL(string: item.thumbnails[0]), let imageData = try? Data(contentsOf: url), let uiImage = UIImage(data: imageData) else { return nil }
+        return uiImage
+    }
 }
