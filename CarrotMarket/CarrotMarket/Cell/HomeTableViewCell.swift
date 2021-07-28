@@ -32,6 +32,9 @@ class HomeTableViewCell: UITableViewCell {
         } else {
             self.itemHeart.text = ""
         }
+        if let calculatedPastTime = calculatePastTime(from: item.date) {
+            self.itemWrittenTime.text = calculatedPastTime
+        }
         if let thumbnail = self.getThumbnailImage(with: item) {
             DispatchQueue.main.async(execute: {
                 self.itemImage.image = thumbnail
@@ -50,5 +53,16 @@ class HomeTableViewCell: UITableViewCell {
     private func getThumbnailImage(with item: ListedItem) -> UIImage? {
         guard let url = URL(string: item.thumbnails[0]), let imageData = try? Data(contentsOf: url), let uiImage = UIImage(data: imageData) else { return nil }
         return uiImage
+    }
+    
+    private func calculatePastTime(from writtenTime: Date) -> String? {
+        guard let distanceDay = Calendar.current.dateComponents([.day], from: writtenTime, to: Date()).day else { return nil }
+        if distanceDay != 0 { return "\(distanceDay)일 전" }
+        guard let distanceHour = Calendar.current.dateComponents([.hour], from: writtenTime, to: Date()).hour else { return nil }
+        if distanceHour != 0 { return "\(distanceHour)시간 전" }
+        guard let distanceMinute = Calendar.current.dateComponents([.minute], from: writtenTime, to: Date()).minute else { return nil }
+        if distanceMinute != 0 { return "\(distanceMinute)분 전" }
+        guard let distanceSecond = Calendar.current.dateComponents([.second], from: writtenTime, to: Date()).second else { return nil }
+        return "\(distanceSecond)초 전"
     }
 }
