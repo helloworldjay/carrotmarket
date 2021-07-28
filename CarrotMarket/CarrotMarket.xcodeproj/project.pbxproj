@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */; };
+		48AAD0EB26B03FB300A74B6E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AAD0EA26B03FB300A74B6E /* TestView.swift */; };
 		48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */; };
 		48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */; };
 		48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF326A183F40078CCC0 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		48AAD0EA26B03FB300A74B6E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		48B7FDEC26A183F40078CCC0 /* CarrotMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */,
+				48AAD0EA26B03FB300A74B6E /* TestView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -158,8 +161,8 @@
 		48B7FE2026A187460078CCC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48FB17BA26A578E0009E1E64 /* DTO */,
 				48FB17B826A55758009E1E64 /* Error.swift */,
+				48FB17BA26A578E0009E1E64 /* DTO */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				48FB17B426A520D2009E1E64 /* NetworkManager.swift in Sources */,
 				48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */,
 				48FB17B726A5548F009E1E64 /* ItemList.swift in Sources */,
+				48AAD0EB26B03FB300A74B6E /* TestView.swift in Sources */,
 				48FB17B926A55758009E1E64 /* Error.swift in Sources */,
 				48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */,
 			);
