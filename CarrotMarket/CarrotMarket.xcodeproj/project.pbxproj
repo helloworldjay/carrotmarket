@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482DB4E426B28FEF00A1AEE3 /* NetworkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */; };
 		48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */; };
-		48AAD0EB26B03FB300A74B6E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AAD0EA26B03FB300A74B6E /* TestView.swift */; };
 		48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */; };
 		48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */; };
 		48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF326A183F40078CCC0 /* HomeViewController.swift */; };
@@ -19,7 +19,7 @@
 		48B7FE1226A183F60078CCC0 /* CarrotMarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FE1126A183F60078CCC0 /* CarrotMarketUITests.swift */; };
 		48FB17B426A520D2009E1E64 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B326A520D2009E1E64 /* NetworkManager.swift */; };
 		48FB17B726A5548F009E1E64 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B626A5548F009E1E64 /* ItemList.swift */; };
-		48FB17B926A55758009E1E64 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B826A55758009E1E64 /* Error.swift */; };
+		48FB17B926A55758009E1E64 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B826A55758009E1E64 /* NetworkError.swift */; };
 		48FB17BD26A582AC009E1E64 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17BC26A582AC009E1E64 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURL.swift; sourceTree = "<group>"; };
 		48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		48AAD0EA26B03FB300A74B6E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		48B7FDEC26A183F40078CCC0 /* CarrotMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		48B7FE1326A183F60078CCC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48FB17B326A520D2009E1E64 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		48FB17B626A5548F009E1E64 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
-		48FB17B826A55758009E1E64 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		48FB17B826A55758009E1E64 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		48FB17BC26A582AC009E1E64 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */,
-				48AAD0EA26B03FB300A74B6E /* TestView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -161,8 +160,7 @@
 		48B7FE2026A187460078CCC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48FB17B826A55758009E1E64 /* Error.swift */,
-				48FB17BA26A578E0009E1E64 /* DTO */,
+				48FB17B626A5548F009E1E64 /* ItemList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,25 +179,11 @@
 		48FB17B226A520BF009E1E64 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				48FB17B826A55758009E1E64 /* NetworkError.swift */,
 				48FB17B326A520D2009E1E64 /* NetworkManager.swift */,
+				482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		48FB17B526A55480009E1E64 /* HTTP Response */ = {
-			isa = PBXGroup;
-			children = (
-				48FB17B626A5548F009E1E64 /* ItemList.swift */,
-			);
-			path = "HTTP Response";
-			sourceTree = "<group>";
-		};
-		48FB17BA26A578E0009E1E64 /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				48FB17B526A55480009E1E64 /* HTTP Response */,
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 		48FB17BB26A5829A009E1E64 /* Utility */ = {
@@ -340,14 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482DB4E426B28FEF00A1AEE3 /* NetworkURL.swift in Sources */,
 				48FB17BD26A582AC009E1E64 /* DateFormatter.swift in Sources */,
 				48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */,
 				48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */,
 				48FB17B426A520D2009E1E64 /* NetworkManager.swift in Sources */,
 				48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */,
 				48FB17B726A5548F009E1E64 /* ItemList.swift in Sources */,
-				48AAD0EB26B03FB300A74B6E /* TestView.swift in Sources */,
-				48FB17B926A55758009E1E64 /* Error.swift in Sources */,
+				48FB17B926A55758009E1E64 /* NetworkError.swift in Sources */,
 				48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
