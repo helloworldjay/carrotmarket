@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4827507826B8DAFC00D418BD /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827507726B8DAFC00D418BD /* CellIdentifier.swift */; };
 		482DB4E426B28FEF00A1AEE3 /* NetworkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */; };
+		482DB4E626B295CF00A1AEE3 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */; };
 		48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */; };
+		48A63CDA26B5888A00BD1F96 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A63CD926B5888A00BD1F96 /* DataManager.swift */; };
+		48A63CDC26B58C0A00BD1F96 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A63CDB26B58C0A00BD1F96 /* NetworkService.swift */; };
 		48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */; };
 		48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */; };
 		48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FDF326A183F40078CCC0 /* HomeViewController.swift */; };
@@ -17,6 +21,8 @@
 		48B7FDFC26A183F60078CCC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B7FDFA26A183F60078CCC0 /* LaunchScreen.storyboard */; };
 		48B7FE0726A183F60078CCC0 /* CarrotMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FE0626A183F60078CCC0 /* CarrotMarketTests.swift */; };
 		48B7FE1226A183F60078CCC0 /* CarrotMarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7FE1126A183F60078CCC0 /* CarrotMarketUITests.swift */; };
+		48F12E3926B38FC9009BD96B /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E926B29D3400A1AEE3 /* MockURLSession.swift */; };
+		48F12E3A26B38FCE009BD96B /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E726B29CB600A1AEE3 /* MockURLSessionDataTask.swift */; };
 		48FB17B426A520D2009E1E64 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B326A520D2009E1E64 /* NetworkManager.swift */; };
 		48FB17B726A5548F009E1E64 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B626A5548F009E1E64 /* ItemList.swift */; };
 		48FB17B926A55758009E1E64 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB17B826A55758009E1E64 /* NetworkError.swift */; };
@@ -41,8 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4827507726B8DAFC00D418BD /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
 		482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURL.swift; sourceTree = "<group>"; };
+		482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		482DB4E726B29CB600A1AEE3 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		482DB4E926B29D3400A1AEE3 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		48A63CD926B5888A00BD1F96 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		48A63CDB26B58C0A00BD1F96 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		48B7FDEC26A183F40078CCC0 /* CarrotMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B7FDEF26A183F40078CCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B7FDF126A183F40078CCC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				48A2A0C926A2F2FD00F2BCCD /* HomeTableViewCell.swift */,
+				4827507726B8DAFC00D418BD /* CellIdentifier.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -179,9 +192,14 @@
 		48FB17B226A520BF009E1E64 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				48FB17B826A55758009E1E64 /* NetworkError.swift */,
+				48A63CDB26B58C0A00BD1F96 /* NetworkService.swift */,
 				48FB17B326A520D2009E1E64 /* NetworkManager.swift */,
+				48FB17B826A55758009E1E64 /* NetworkError.swift */,
 				482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */,
+				482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */,
+				482DB4E926B29D3400A1AEE3 /* MockURLSession.swift */,
+				482DB4E726B29CB600A1AEE3 /* MockURLSessionDataTask.swift */,
+				48A63CD926B5888A00BD1F96 /* DataManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -327,11 +345,17 @@
 				482DB4E426B28FEF00A1AEE3 /* NetworkURL.swift in Sources */,
 				48FB17BD26A582AC009E1E64 /* DateFormatter.swift in Sources */,
 				48B7FDF426A183F40078CCC0 /* HomeViewController.swift in Sources */,
+				48F12E3926B38FC9009BD96B /* MockURLSession.swift in Sources */,
 				48B7FDF026A183F40078CCC0 /* AppDelegate.swift in Sources */,
 				48FB17B426A520D2009E1E64 /* NetworkManager.swift in Sources */,
+				48A63CDC26B58C0A00BD1F96 /* NetworkService.swift in Sources */,
 				48A2A0CA26A2F2FD00F2BCCD /* HomeTableViewCell.swift in Sources */,
 				48FB17B726A5548F009E1E64 /* ItemList.swift in Sources */,
 				48FB17B926A55758009E1E64 /* NetworkError.swift in Sources */,
+				4827507826B8DAFC00D418BD /* CellIdentifier.swift in Sources */,
+				48F12E3A26B38FCE009BD96B /* MockURLSessionDataTask.swift in Sources */,
+				482DB4E626B295CF00A1AEE3 /* URLSessionProtocol.swift in Sources */,
+				48A63CDA26B5888A00BD1F96 /* DataManager.swift in Sources */,
 				48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
