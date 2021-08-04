@@ -10,11 +10,11 @@ import Foundation
 struct NetworkService {
     
     private var currentPage: UInt = 1
-    private let networkManager: NetworkManager
-    private let dataManager: DataManager
+    private let networkManager: NetworkManagable
+    private let dataManager: DataManagable
     private let fetchItemListURL = NetworkURL.test.url
     
-    init(networkManager: NetworkManager, dataManager: DataManager) {
+    init(networkManager: NetworkManagable, dataManager: DataManagable) {
         self.networkManager = networkManager
         self.dataManager = dataManager
     }

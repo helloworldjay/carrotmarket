@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataManager {
+struct DataManager: DataManagable {
     
     func decodeJSONData<T: Decodable>(with data: Data) -> T? {
         let decoder = JSONDecoder()
