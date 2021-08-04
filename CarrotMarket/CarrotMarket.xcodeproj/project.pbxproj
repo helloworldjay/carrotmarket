@@ -108,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		481DB53226BA637A005E1A78 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				48FB17B826A55758009E1E64 /* NetworkError.swift */,
+				482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */,
+				481DB52726BA3C86005E1A78 /* HTTPStatusCode.swift */,
+				482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */,
+				481DB52D26BA405F005E1A78 /* NetworkManagable.swift */,
+				481DB52F26BA4068005E1A78 /* DataManagable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		48A2A0C826A2F2CF00F2BCCD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,17 +213,12 @@
 		48FB17B226A520BF009E1E64 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				481DB53226BA637A005E1A78 /* Utility */,
 				48A63CDB26B58C0A00BD1F96 /* NetworkService.swift */,
 				48FB17B326A520D2009E1E64 /* NetworkManager.swift */,
-				48FB17B826A55758009E1E64 /* NetworkError.swift */,
-				482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */,
-				482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */,
 				482DB4E926B29D3400A1AEE3 /* MockURLSession.swift */,
 				482DB4E726B29CB600A1AEE3 /* MockURLSessionDataTask.swift */,
 				48A63CD926B5888A00BD1F96 /* DataManager.swift */,
-				481DB52726BA3C86005E1A78 /* HTTPStatusCode.swift */,
-				481DB52D26BA405F005E1A78 /* NetworkManagable.swift */,
-				481DB52F26BA4068005E1A78 /* DataManagable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
