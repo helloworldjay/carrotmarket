@@ -61,7 +61,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let itemCell = itemListTableView.dequeueReusableCell(withIdentifier: CellIdentifier.itemListCell.identifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
-        if let thumbnail = UIImage(named: DefaultImage.itemListThumbnail.fileName) {
+        if let thumbnail = DefaultImage.itemListThumbnail.image {
             itemCell.itemImage.image = thumbnail
         }
         
@@ -74,10 +74,10 @@ extension HomeViewController: UITableViewDataSource {
 enum DefaultImage {
     case itemListThumbnail
     
-    var fileName: String {
+    var image: UIImage? {
         switch self {
         case .itemListThumbnail:
-            return "당근마켓 아이콘"
+            return UIImage(named: "당근마켓 아이콘")
         }
     }
 }
