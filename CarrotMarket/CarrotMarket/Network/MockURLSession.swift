@@ -45,14 +45,3 @@ class MockURLSession: URLSessionProtocol {
         return HTTPURLResponse(url: networkURL, statusCode: HTTPStatusCode.ok.code, httpVersion: "2", headerFields: nil)
     }
 }
-
-enum DataAssetFileName {
-    case itemList
-    
-    var fileName: String {
-        switch self {
-        case .itemList:
-            return "carrotJSON"
-        }
-    }
-}
