@@ -8,12 +8,12 @@
 import Foundation
 
 enum NetworkURL {
-    case home
+    case test
     
     var url: String {
         switch self {
-        case .home:
-            return "Home URL Example"
+        case .test:
+            return "https://www.daangn.com/"
         }
     }
 }

@@ -9,34 +9,24 @@ import Foundation
 
 struct NetworkManager {
     
-    private func fetchModel<T: Decodable>(with urlRequest: URLRequest, completionHandler: @escaping (Result<T, APIError>) -> Void) {
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+    let session: URLSessionProtocol
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
+    
+    func fetchModel(with urlRequest: URLRequest, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
+        session.dataTask(with: urlRequest) { data, response, error in
             guard let data = data else {
-                return completionHandler(.failure(APIError.networkError))
+                return completionHandler(.failure(NetworkError.networkError))
             }
             
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
-                return completionHandler(.failure(APIError.networkError))
+                return completionHandler(.failure(NetworkError.networkError))
             }
             
-            guard let model = try? JSONDecoder().decode(T.self, from: data) else {
-                return completionHandler(.failure(APIError.jsonParsingError))
-            }
-            
-            completionHandler(.success(model))
+            completionHandler(.success(data))
         }.resume()
     }
     
-    func fetchItemList(page: UInt, completion: @escaping (Result<ItemList, NetworkError>) -> ()) {
-        let fetchItemListURL = NetworkURL.home.url
-        
-        guard let apiURL = URL(string: fetchItemListURL) else {
-            completion(.failure(APIError.invalidAddressError))
-            return
-        }
-        
-        let request = URLRequest(url: apiURL)
-        fetchModel(with: request, completionHandler: completion)
-    }
 }
