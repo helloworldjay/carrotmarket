@@ -40,9 +40,9 @@ class MockURLSession: URLSessionProtocol {
     func httpResponse(isFailureRequest: Bool) -> HTTPURLResponse? {
         guard let networkURL = URL(string: NetworkURL.test.url) else { return nil }
         if isFailureRequest {
-            return HTTPURLResponse(url: networkURL, statusCode: 410, httpVersion: "2", headerFields: nil)
+            return HTTPURLResponse(url: networkURL, statusCode: HTTPStatusCode.gone.code, httpVersion: "2", headerFields: nil)
         }
-        return HTTPURLResponse(url: networkURL, statusCode: 200, httpVersion: "2", headerFields: nil)
+        return HTTPURLResponse(url: networkURL, statusCode: HTTPStatusCode.ok.code, httpVersion: "2", headerFields: nil)
     }
 }
 

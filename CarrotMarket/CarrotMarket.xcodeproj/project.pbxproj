@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481DB52826BA3C86005E1A78 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DB52726BA3C86005E1A78 /* HTTPStatusCode.swift */; };
 		4827507826B8DAFC00D418BD /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827507726B8DAFC00D418BD /* CellIdentifier.swift */; };
 		482DB4E426B28FEF00A1AEE3 /* NetworkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */; };
 		482DB4E626B295CF00A1AEE3 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		481DB52726BA3C86005E1A78 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		4827507726B8DAFC00D418BD /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
 		482DB4E326B28FEF00A1AEE3 /* NetworkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURL.swift; sourceTree = "<group>"; };
 		482DB4E526B295CF00A1AEE3 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				482DB4E926B29D3400A1AEE3 /* MockURLSession.swift */,
 				482DB4E726B29CB600A1AEE3 /* MockURLSessionDataTask.swift */,
 				48A63CD926B5888A00BD1F96 /* DataManager.swift */,
+				481DB52726BA3C86005E1A78 /* HTTPStatusCode.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				48F12E3A26B38FCE009BD96B /* MockURLSessionDataTask.swift in Sources */,
 				482DB4E626B295CF00A1AEE3 /* URLSessionProtocol.swift in Sources */,
 				48A63CDA26B5888A00BD1F96 /* DataManager.swift in Sources */,
+				481DB52826BA3C86005E1A78 /* HTTPStatusCode.swift in Sources */,
 				48B7FDF226A183F40078CCC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
