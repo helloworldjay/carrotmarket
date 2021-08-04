@@ -10,7 +10,7 @@ import Foundation
 struct ItemList: Decodable {
     var page: UInt
     var itemList: [ListedItem]
-
+    
     enum CodingKeys: String, CodingKey {
         case page
         case itemList = "items"
